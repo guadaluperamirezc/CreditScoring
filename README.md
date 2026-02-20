@@ -1,6 +1,8 @@
 # **🚨 Credit Scoring Programa de Especialización**
 Este repositorio tiene el contenido del Programa de Especialización en Credit Scoring con Python.
 
+<img src="figuras/scoring_logo.jpg" width="200"/>
+
 ## **Resumen** 
 Esta especialización tiene como objetivo brindar una formación integral, práctica y aplicada del desarrollo de herramientas de analítica avanzada para la evaluación del riesgo de crédito de los clientes en el sector bancario.
 
