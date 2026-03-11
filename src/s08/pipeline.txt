@@ -1,0 +1,11 @@
+1. instalar:
+pip install fastapi uvicorn
+
+
+2. ejecutar en terminal:
+cd src/s08
+python -m uvicorn main_api:app --host 0.0.0.0 --port 8000 --reload
+http://localhost:8000/docs
+
+3. Fin
+Ctrl + C

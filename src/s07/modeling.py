@@ -208,7 +208,7 @@ class Modeling:
             estimator            = pipeline,
             param_distributions  = param_grid,
             n_iter               = self.n_iter,
-            scoring              = 'f1_macro',   # AUC is standard for PD models recall, roc_auc
+            scoring              = 'roc_auc',   # AUC is standard for PD models recall, roc_auc
             cv                   = cv,
             verbose              = 0,
             n_jobs               = -1,
@@ -226,7 +226,7 @@ class Modeling:
 
         # ── Optimal threshold (from train predictions) ────────────────────────
         train_proba    = self.best_model.predict_proba(self.X_train)[:, 1]
-        self.threshold = _find_best_threshold(self.y_train, train_proba, 'f1')
+        self.threshold = _find_best_threshold(self.y_train, train_proba, 'auc')
         print(f"[train] Optimal threshold (max F1 on train): {self.threshold:.4f}")
 
     # ──────────────────────────────────────────────────────────────────────────
