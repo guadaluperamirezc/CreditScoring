@@ -3,7 +3,7 @@ import numpy as np
 from datetime import datetime, timedelta
 
 np.random.seed(42)
-N = 2000
+N = 5000
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 def random_dates(start, end, n):
@@ -106,7 +106,7 @@ default_score = (
 default = (default_score > 0.30).astype(int)
 
 # ── application dates ─────────────────────────────────────────────────────────
-app_dates = random_dates('2023-01-01', '2025-12-31', N)
+app_dates = random_dates('2024-01-01', '2025-12-31', N)
 
 # ── assemble DataFrame ────────────────────────────────────────────────────────
 df = pd.DataFrame({
@@ -141,7 +141,7 @@ df = pd.DataFrame({
     'Application_Date':             app_dates,
 })
 
-out = 'credit_data.csv'
+out = 'data\s07\credit_data.csv'
 df.to_csv(out, index=False)
 print(f"Saved {len(df)} rows → {out}")
 print(df.head(3).to_string())
